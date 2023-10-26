@@ -19,7 +19,9 @@ class ItemController extends Controller
 
     public function create()
     {
-        return view('create');
+        $itemTypes = Item::all(); // Replace 'ItemType' with your actual model name or data source
+        $itemConditions = Item::all(); // Replace 'ItemCondition' with your actual model name or data source
+        return view('create', compact('itemTypes', 'itemConditions'));
     }
 
     public function store(Request $request)
