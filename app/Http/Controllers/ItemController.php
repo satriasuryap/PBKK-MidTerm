@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Storage;
 
 class ItemController extends Controller
 {
+    
     public function index()
     {
         // Retrieve all items from the database
@@ -18,7 +19,7 @@ class ItemController extends Controller
 
     public function create()
     {
-        return view('items.create');
+        return view('create');
     }
 
     public function store(Request $request)
@@ -75,4 +76,6 @@ class ItemController extends Controller
     {
         // Delete item logic
     }
+
+   
 }
